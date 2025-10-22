@@ -5,42 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Kroop | Portfolio</title>
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:hover {
+            opacity: 0.9;
+        }
+
+        .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
         }
-        img {
-            max-width: 200px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
+
         .header {
             text-align: center;
-            padding-bottom: 30px;
+            padding: 40px 20px;
         }
+
+        .header img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #0366d6;
+            margin-bottom: 20px;
+        }
+
         .header h1 {
-            margin-bottom: 10px;
-        }
-        .resume, .contact {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        a {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             color: #0366d6;
-            text-decoration: none;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        .section {
+            background: #fff;
+            padding: 30px 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #0366d6;
+            margin-bottom: 15px;
+        }
+
+        .resume a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #0366d6;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .resume a:hover {
+            background: #024b9a;
+        }
+
+        .contact p {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header img {
+                width: 140px;
+                height: 140px;
+            }
         }
     </style>
 </head>
 <body>
-    <div cla
+    <div class="container">
+        <div class="header">
+            <!-- Replace "your-photo.jpg" with your profile picture -->
+            <img src="your-photo.jpg" alt="Jonathan Kroop">
+            <h1>Jonathan Kroop</h1>
+            <p>Hello! My name is Jonathan Kroop. I am currently a candidate for a Master of Science in Business Analytics at the Brandeis University School of Business and Economics. I am passionate about leveraging data-driven insights to solve complex business problems and enhance decision-making.</p>
+        </div>
+
+        <div class="section resume">
+            <h2>Resume</h2>
+            <!-- Replace "your-resume.pdf" with your resume file -->
+            <a href="your-resume.pdf" target="_blank">Download My Resume</a>
+        </div>
+
+        <div class="section contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:jonathankroop@brandeis.edu">jonathankroop@brandeis.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jonathan-kroop/" target="_blank">linkedin.com/in/jonathan-kroop</a></p>
+        </div>
+    </div>
+</body>
+</html>
