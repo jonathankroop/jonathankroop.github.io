@@ -17,12 +17,12 @@
             background: #f0f4f8;
             color: #333;
             line-height: 1.6;
-            padding: 20px;
+            padding-top: 70px; /* Offset for sticky navbar */
         }
 
         a {
             text-decoration: none;
-            color: #fff;
+            color: inherit;
         }
 
         a:hover {
@@ -34,6 +34,32 @@
             margin: 0 auto;
         }
 
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #0366d6;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1000;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .navbar a {
+            color: #fff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
         .header {
             text-align: center;
             padding: 40px 20px;
@@ -61,6 +87,7 @@
             color: #555;
         }
 
+        /* Section */
         .section {
             background: #fff;
             padding: 30px 20px;
@@ -71,9 +98,10 @@
 
         .section h2 {
             color: #0366d6;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
+        /* Resume */
         .resume a {
             display: inline-block;
             padding: 12px 25px;
@@ -81,15 +109,59 @@
             border-radius: 6px;
             font-weight: bold;
             transition: 0.3s;
+            color: #fff;
         }
 
         .resume a:hover {
             background: #024b9a;
         }
 
+        /* Contact */
         .contact p {
             margin: 8px 0;
             font-size: 1rem;
+        }
+
+        /* Projects */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #0366d6;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #fff;
+            color: #0366d6;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            background: #e0e0e0;
         }
 
         /* Responsive */
@@ -102,25 +174,56 @@
                 width: 140px;
                 height: 140px;
             }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
-        <div class="header">
-            <!-- Replace "your-photo.jpg" with your profile picture -->
+        <!-- About Section -->
+        <div class="header section" id="about">
             <img src="your-photo.jpg" alt="Jonathan Kroop">
             <h1>Jonathan Kroop</h1>
             <p>Hello! My name is Jonathan Kroop. I am currently a candidate for a Master of Science in Business Analytics at the Brandeis University School of Business and Economics. I am passionate about leveraging data-driven insights to solve complex business problems and enhance decision-making.</p>
         </div>
 
-        <div class="section resume">
+        <!-- Resume Section -->
+        <div class="section resume" id="resume">
             <h2>Resume</h2>
-            <!-- Replace "your-resume.pdf" with your resume file -->
             <a href="your-resume.pdf" target="_blank">Download My Resume</a>
         </div>
 
-        <div class="section contact">
+        <!-- Projects Section -->
+        <div class="section projects" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of the project, what tools or techniques you used, and the outcome or impact.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of another project, highlighting your role and skills demonstrated.</p>
+                    <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section contact" id="contact">
             <h2>Contact Me</h2>
             <p>Email: <a href="mailto:jonathankroop@brandeis.edu">jonathankroop@brandeis.edu</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/jonathan-kroop/" target="_blank">linkedin.com/in/jonathan-kroop</a></p>
